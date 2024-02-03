@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Blog</title>
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <section id="blogs">
+      <div class="wrapper wrapper-blogs">
+        <div class="newpost">
+          <p class="new-btn">
+            <a class="btn" href="/blogs/new">Create New Post</a>
+          </p>
+          <h3>Published Blogs</h3>
+        </div>
+
+        <div class="blogs">
+          <ul class="flex">
+            <% blogPosts.forEach((post, index) => { %>
+            <li class="blog">
+              <div class="list_inner">
+                <p class="date">
+                  <iconify-icon icon="fa6-solid:calendar-days"> </iconify-icon>
+                  <span> <%= post.publishedDate %> </span>
+                </p>
+                <div class="short">
+                  <div class="">
+                    <h3><%= post.Heading %></h3>
+                  </div>
+
+                  <div class="learnmore">
+                    <p>
+                      <a href="/blogs/<%= index %>" class="flex">
+                        <span style="margin-right: 5px">Learn More</span>
+                        <iconify-icon
+                          icon="fa6-solid:circle-arrow-right"
+                          style="color: #130f49"
+                        ></iconify-icon>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

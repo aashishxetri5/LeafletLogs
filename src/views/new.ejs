@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Post</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+  </head>
+  <body>
+    <h1>Create New Post</h1>
+    <form method="post" action="/blogs/create">
+      <label for="heading">Heading:</label>
+      <input type="text" id="heading" name="Heading" required />
+
+      <br />
+
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" rows="4" required></textarea>
+
+      <br />
+
+      <input type="submit" value="Create Post" />
+    </form>
+    <a href="/">Back to Home</a>
+  </body>
+</html>
